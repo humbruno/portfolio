@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Tinos&display=swap");
+
+:root {
+  --fontPrimary: "Montserrat", sans-serif; // weights 400 500 600
+  --fontSecondary: "Tinos", serif; // weights 400
+}
+
+html {
+  font-size: 100%;
+}
+
+body,
+button,
+a {
+  font-family: var(--fontPrimary);
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}

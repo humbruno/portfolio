@@ -1,0 +1,12 @@
+@use "utils" as *;
+@use "nav";
+
+body {
+  min-height: 100vh;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.container {
+  margin: 0 150px 0 150px;
+}
