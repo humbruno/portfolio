@@ -1,12 +1,32 @@
 @use "utils" as *;
 @use "nav";
+@use "hero";
 
 body {
   min-height: 100vh;
   background-color: var(--primary);
-  color: var(--secondary);
 }
 
 .container {
-  margin: 0 150px 0 150px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cta {
+  font-size: rem(16);
+  font-weight: 500;
+
+  background: linear-gradient(90deg, var(--gradientStart), var(--gradientEnd));
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: var(--tertiary);
+  transition: 250ms ease-in-out;
+  border: 0;
+
+  @include breakpoint(large) {
+    &:hover {
+      background: var(--tertiary);
+      color: var(--secondary);
+    }
+  }
 }

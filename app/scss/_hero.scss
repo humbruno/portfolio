@@ -1,0 +1,71 @@
+@use "utils" as *;
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+  }
+
+  div {
+    flex: 1;
+  }
+
+  &__text {
+    @include breakpoint-down(medium) {
+      order: 2;
+      text-align: center;
+    }
+
+    strong {
+      color: var(--secondary);
+      font-family: var(--fontSecondary);
+      font-size: rem(16);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+    }
+
+    h1 {
+      font-size: rem(48);
+      font-weight: 600;
+      margin: 15px 0;
+
+      background: -webkit-linear-gradient(
+        90deg,
+        var(--gradientStart),
+        var(--gradientEnd)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      color: var(--secondary);
+      font-size: rem(16);
+
+      span {
+        color: var(--gradientStart);
+      }
+    }
+
+    button {
+      margin-top: 25px;
+    }
+  }
+
+  &__illustration {
+    text-align: center;
+
+    @include breakpoint-down(medium) {
+      order: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
