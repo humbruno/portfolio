@@ -7,6 +7,7 @@
 
   @include breakpoint-down(medium) {
     flex-direction: column;
+    margin-bottom: 100px;
   }
 
   div {
@@ -45,6 +46,10 @@
     p {
       color: var(--secondary);
       font-size: rem(16);
+
+      @include breakpoint-down(medium) {
+        text-align: left;
+      }
 
       span {
         color: var(--gradientStart);

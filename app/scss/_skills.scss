@@ -1,0 +1,43 @@
+@use "utils" as *;
+
+.skills {
+  margin-bottom: 200px;
+
+  h2 {
+    font-size: rem(28);
+    font-weight: 600;
+    margin: 15px 0;
+    color: var(--secondary);
+
+    @include breakpoint-down(medium) {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    row-gap: 100px;
+
+    @include breakpoint-down(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-item {
+      text-align: center;
+      color: var(--secondary);
+
+      img {
+        width: 80px;
+      }
+
+      h3 {
+        font-weight: 500;
+        font-size: rem(14);
+        margin-top: 10px;
+      }
+    }
+  }
+}

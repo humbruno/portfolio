@@ -1,0 +1,38 @@
+@use "utils" as *;
+
+.about {
+  color: var(--secondary);
+  margin-bottom: 100px;
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border-left: 3px solid var(--gradientStart);
+    padding-left: 15px;
+
+    @include breakpoint-down(medium) {
+      gap: 30px;
+    }
+  }
+
+  h2 {
+    font-size: rem(28);
+    font-weight: 600;
+    margin: 15px 0;
+
+    @include breakpoint-down(medium) {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  p {
+    font-size: rem(16);
+
+    span {
+      color: var(--gradientStart);
+    }
+  }
+}
