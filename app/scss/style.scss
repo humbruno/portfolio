@@ -33,4 +33,11 @@ body {
       color: var(--secondary);
     }
   }
+
+  @include breakpoint-down(medium) {
+    &:active {
+      background: var(--tertiary);
+      color: var(--secondary);
+    }
+  }
 }
